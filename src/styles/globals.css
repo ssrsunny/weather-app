@@ -1,0 +1,27 @@
+/* styles/globals.css */
+:root {
+  --primary-color: #d0f0ff;
+  --secondary-color: #a0cfe9;
+  --accent-color: #003f5c;
+  --font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background: radial-gradient(circle at top left, var(--primary-color), var(--secondary-color));
+  color: var(--accent-color);
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
