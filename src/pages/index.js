@@ -36,8 +36,49 @@ export default function Home() {
     }
   };
 
+  const getBackgroundImage = (weatherMain) => {
+    switch (weatherMain) {
+      case "Clear":
+        return "/backgrounds/clear.jpg";
+      case "Clouds":
+        return "/backgrounds/clouds.jpg";
+      case "Rain":
+        return "/backgrounds/rain.jpg";
+      case "Snow":
+        return "/backgrounds/snow.jpg";
+      case "Haze":
+        return "/backgrounds/haze.jpg";
+      case "Thunderstorm":
+        return "/backgrounds/thunderstorm.jpg";
+      case "Drizzle":
+        return "/backgrounds/drizzle.jpg";
+      case "Mist":
+        return "/backgrounds/mist.jpg";
+      case "Smoke":
+        return "/backgrounds/smoke.jpg";
+      case "Fog":
+        return "/backgrounds/fog.jpg";
+      case "Sand":
+        return "/backgrounds/sand.jpg";
+      case "Tornado":
+        return "/backgrounds/tornado.jpg";
+      default:
+        return "/backgrounds/clear.jpg"; // fallback image
+    }
+  };
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{
+        backgroundImage: weather
+          ? `url(${getBackgroundImage(weather.main)})`
+          : undefined,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className={styles.card}>
         <h1 className={styles.title}>Weather Info App</h1>
 
